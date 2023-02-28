@@ -1,0 +1,20 @@
+<view class="container">
+
+  <view class="title">上传历史</view>
+
+  <view  wx:if="{{history_list}}" class="code_box">
+    <view class="code_box_record">
+      <view class="code_box_record_title" style="width: 10%;">序号</view>
+      <view class="code_box_record_title" style="width: 65%;">上传缩略图</view>
+      <view class="code_box_record_title" style="width: 25%;">详情</view>
+    </view>
+    <view class="line"></view>
+    <view class="code_box_record" wx:for="{{history_list}}" wx:key="_id">
+      <view class="code_box_record_detail" style="width: 10%;">{{index+1}}</view>
+      <image class="code_box_record_detail" style="width: 65%; height: 180rpx;" src="{{item.file_id}}" mode="aspectFit" data-src="{{item.file_id}}" bindtap="preview"></image>
+      <view style="width: 25%; margin: auto;">
+        <view id="{{item._id}}" class="detail_button" bindtap="to_detail">查看详情</view>
+      </view>
+    </view>
+  </view>
+</view>

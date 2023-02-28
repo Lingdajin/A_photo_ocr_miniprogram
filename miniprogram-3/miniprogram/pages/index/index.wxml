@@ -1,0 +1,13 @@
+<view class="container">
+
+  <view class="title">OCR识别与翻译</view>
+
+  <button class="button" disabled="{{disable_upload_button}}" bindtap="uploadImg" type="primary">上传图片</button>
+  <image wx:if="{{imgSrc}}" class="code_img" src="{{imgSrc}}" data-src="{{imgSrc}}" bindtap="preview" mode="aspectFit"></image>
+  <view class="result_text">识别结果</view>
+  <scroll-view class="result_box" scroll-y="true">{{ocr_result}}</scroll-view>
+  <view class="result_text">翻译结果</view>
+  <scroll-view class="result_box" scroll-y="true">{{translate_result}}</scroll-view>
+
+  <view class="history_button" bindtap="jumpPage">上传历史  ></view>
+</view>

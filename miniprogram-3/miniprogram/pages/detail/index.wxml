@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="title">上传详情</view>
+  <image class="code_img" src="{{file_id}}" mode="aspectFit" data-src="{{file_id}}" bindtap="preview"></image>
+  <view class="result_text">识别结果</view>
+  <scroll-view class="result_box" scroll-y="true">{{ocr_result}}</scroll-view>
+  <view class="result_text">翻译结果</view>
+  <scroll-view class="result_box" scroll-y="true">{{translate_result}}</scroll-view>
+</view>
